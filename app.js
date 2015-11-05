@@ -1,14 +1,11 @@
-function fizzBuzz(){
-  for(i=1; i<100; i++)
-  if(i%3 === 0 && i%5 ===0){
-    console.log("fizzBuzz");
-  }else if( i%3 === 0) {
-    console.log("fizz");
-  }else if( i%5 === 0){
-    consloe.log("buzz");
-  }else {
-    console.log("i");
-  }
-}
+var express = require('express');
+var app = express();
 
-fizzBuzz();
+app.get('/', function (req, res) {
+  res.send('Hello');
+});
+
+app.listen(9000, function(){
+  console.log('server on');
+
+});
