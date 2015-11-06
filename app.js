@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello');
+app.use(express.static( __dirname + '/public'));
+
+app.get('/',function(req,res){
+  res.send('hello world~~~');
 });
 
-app.listen(9000, function(){
+app.listen(7000, function(){
   console.log('server on');
 
 });
